@@ -1,0 +1,37 @@
+C++ has the ability to provide the operators with as special meaning for a data type. 
+The mechanism of giving such special meanings to an operator is known as operator overloading. 
+We can overload all the operators except the following:
+    Class member access operator (“.” And ”.*”) 
+    Scope resolution operator (“::”)
+    Size operator (sizeof)
+    Conditional operator (“?:”)
+
+To define an additional task to an operator, specify what it means in relation to the class to which the operator is applied. 
+This is done with the help of a special function, called operator function.
+The process of overloading involves following steps:
+    1. Create a class that defines the data type that is to be used in the overloading operation.
+    2. Declare the operator function operator op() in the public part of the class. It may be a member function or a friend function.
+    3. Here op is the operator to be overloaded.
+    4. Define the operator function to implement the required operations.
+
+General Form:-
+return-type classname :: operator op(arglist)
+{
+    // Function body
+}
+
+Operator overloading concept can be applied in following two major areas (Benefits)
+    1. Extension of usage of operators
+    2. Data conversions
+
+Rules to be followed for operator overloading:-
+    1.Only existing operators can be overloaded.
+    2.Overloaded operators must have at least one operand that is of user defined operators.
+    3.We cannot change basic meaning of an operator.
+    4.Overloaded operator must follow minimum characteristics that of original operator.
+    5.When using binary operator overloading through member function, the left hand operand must be an object of relevant class.
+
+The number of arguments in the overloaded operator‟ s arguments list depends
+    1. Operator function must be either member function or friend function.
+    2. If operator function is a friend function then it will have one argument for unary operator & two arguments for binary operator.
+    3. If operator function is a member function then it will have Zero argument for unary operator & one arguments for binary operator.

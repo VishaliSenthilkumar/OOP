@@ -1,0 +1,36 @@
+The mechanism of deriving a new class from an old one is called inheritance or derivation. 
+The old class is referred to as the base class and the new one is called the derived class or sub class. 
+The derived class inherits some or all of the traits from the base class.
+A class can also inherit properties from more than one class or from more than one level.
+Reusability is an important feature of inheritance.
+
+A derived class can be defined by specifying its relationship with the base class in addition to its own details.
+class derived-class-name : visibility-mode base-class-name 
+{
+………
+………
+}
+
+The colon indicates that the derived class name is derived from the base-class-name. 
+The visibility mode is optional and if present, may be either private or protected or public. 
+The default is private. 
+Visibility mode specifies whether the features of the base class are privately derived or publicly derived.
+
+
+                                    Derived class visibility
+
+Base class visibility       private            public             protected
+
+        private           not inherited     not inherited       not inherited
+
+        public              private            public            protected
+
+        protected           private           protected          protected
+
+
+Types of Inheritance:
+    1.Single Inheritance
+    2.Multi level Inheritance
+    3.Mutiple Inheritance
+    4.Hybrid inheritance
+    5.Hierarchical Inheritance
