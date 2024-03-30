@@ -10,7 +10,7 @@
 // When a function is made virtual, C++ determines which function to use at runtime based on the type of object pointed to by the base pointer, rather than the type of the pointer. 
 // Thus, by making the base pointer to point to different objects, we can execute different versions of the virtual function.
 
-// Function Overriding occurs when a derived class has a definition for one of the member functions of the base class.
+// **Function Overriding** occurs when a derived class has a definition for one of the member functions of the base class.
 
 #include<iostream>
 using namespace std;
@@ -33,7 +33,7 @@ class Derived : public Base
     {
         cout<<"Display Derived"<<endl;
     }
-    void show()
+    void show() //override    <---use virtual in base class or use override keyword in derived class if you want to achieve overriding using pointer--->
     {
         cout<<"show derived"<<endl;
     }
@@ -51,6 +51,13 @@ int main()
     ptr=&d;
     ptr->display(); //calls Base
     ptr->show(); //class Derived
+
+    cout<<"Base class object"<<endl;
+    b.display(); //calls Base
+    b.show(); //calls Base
+    cout<<"Derived class object"<<endl;
+    d.display(); //calls Derived
+    d.show(); //class Derived
     return 0;
 }
 
